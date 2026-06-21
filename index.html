@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soft Reset — XenoROM Voice (Xenogears, finally voiced)</title>
+<meta name="description" content="A free, non-commercial fan voice track for Xenogears that plays live in RetroArch — no ROM patch. AI-generated voices. R0 covers the Lahan arc.">
+<meta property="og:title" content="XenoROM Voice — Xenogears, finally voiced">
+<meta property="og:description" content="A free fan voice track that plays live in RetroArch. No ROM patch. AI-generated voices. R0 = the Lahan arc.">
+<meta property="og:image" content="assets/banner.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#16181F">
+<link rel="icon" href="assets/avatar.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#16181F;--ink2:#1E212B;--amber:#FF8A4C;--cyan:#34E0D8;--paper:#F4F1EA;--muted:#9AA3B2;--line:#2A2E38;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--ink);color:var(--paper);font-family:'Space Grotesk',-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6;}
+a{color:var(--cyan);}
+.wrap{max-width:880px;margin:0 auto;padding:0 24px;}
+header{padding:26px 0;border-bottom:1px solid var(--line);}
+.brand{display:flex;align-items:center;gap:12px;}
+.brandname{font-weight:700;font-size:22px;}
+.logo{height:34px;width:34px;display:block;}
+.hero{padding:70px 0 36px;}
+.badge{display:inline-block;font-size:13px;color:var(--amber);border:1px solid var(--amber);border-radius:999px;padding:4px 13px;margin-bottom:22px;}
+h1{font-size:clamp(34px,6vw,56px);line-height:1.05;margin:0 0 16px;font-weight:700;}
+.amber{color:var(--amber);}
+.lede{font-size:clamp(17px,2.4vw,21px);color:var(--muted);max-width:620px;margin:0 0 28px;}
+.btns{display:flex;flex-wrap:wrap;gap:14px;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:12px;font-weight:700;text-decoration:none;font-size:16px;}
+.btn-primary{background:var(--amber);color:#3a1a08;}
+.btn-ghost{background:transparent;color:var(--paper);border:1px solid var(--line);}
+.soon{font-size:13px;color:var(--muted);margin-top:12px;}
+.disclosure{background:var(--ink2);border:1px solid var(--amber);border-radius:14px;padding:18px 20px;margin:36px 0;font-size:15px;color:#e9e4da;}
+.disclosure strong{color:var(--amber);}
+section{padding:30px 0;border-top:1px solid var(--line);}
+h2{font-size:24px;font-weight:700;margin:0 0 16px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;}
+.card{background:var(--ink2);border:1px solid var(--line);border-radius:12px;padding:18px;}
+.card h3{margin:0 0 6px;font-size:15px;color:var(--amber);}
+.card p,ol{color:var(--muted);}
+.card p{margin:0;font-size:15px;}
+ol{padding-left:20px;}
+footer{padding:34px 0 60px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);}
+</style>
+</head>
+<body>
+<header><div class="wrap brand">
+  <svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><path d="M23.55 13.87 A20 20 0 1 1 40.45 13.87" fill="none" stroke="#FF8A4C" stroke-width="6" stroke-linecap="round"/><line x1="32" y1="9.6" x2="32" y2="32" stroke="#FF8A4C" stroke-width="6" stroke-linecap="round"/></svg>
+  <span class="brandname">Soft Reset</span>
+</div></header>
+<main class="wrap">
+  <div class="hero">
+    <div class="badge">XenoROM Voice · R0 — The Lahan Arc</div>
+    <h1>Xenogears, <span class="amber">finally voiced.</span></h1>
+    <p class="lede">A free, non-commercial fan voice track that plays live in RetroArch — in sync with the game, in real time. No ROM patch, no modified emulator. R0 covers the complete Lahan arc.</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="#">Download on itch.io</a>
+      <a class="btn btn-ghost" href="#">GitHub Releases</a>
+    </div>
+    <p class="soon">Links go live at launch — releasing soon.</p>
+  </div>
+
+  <div class="disclosure">
+    <strong>Please read.</strong> All voices are <strong>AI-generated</strong> — not real actors. Xenogears was never voice-acted, so no performer is being replaced. Xenogears © Square Enix — this project is <strong>not affiliated with or endorsed by Square Enix</strong>. It ships no game data; you bring your own legally-owned disc.
+  </div>
+
+  <section>
+    <h2>How it works</h2>
+    <div class="grid">
+      <div class="card"><h3>1 · Reads</h3><p>Reads the game's on-screen text from RetroArch's RAM.</p></div>
+      <div class="card"><h3>2 · Matches</h3><p>Matches it to a pre-recorded AI voice clip.</p></div>
+      <div class="card"><h3>3 · Speaks</h3><p>Plays it live — read-only, and silent on any line it doesn't recognize.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Get set up</h2>
+    <ol>
+      <li>RetroArch with the Beetle PSX HW core (PCSX-Redux supported as an alternate).</li>
+      <li>mpv (free) for playback.</li>
+      <li>Your own legally-owned copy of Xenogears — no game data is included.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Pairs with Xenogears HD</h2>
+    <p style="color:var(--muted)">Stacks cleanly with 1vierock's Xenogears HD texture pack on the same RetroArch + Beetle PSX HW core — textures + voice, all non-invasive. Get their pack from <a href="https://www.vierockhd.ca/" target="_blank" rel="noopener">vierockhd.ca</a>. (We don't redistribute their work.)</p>
+  </section>
+</main>
+<footer class="wrap">
+  Soft Reset — classic games, brand-new experiences.<br>
+  Free, non-commercial fan project · AI-generated voices · Not affiliated with or endorsed by Square Enix. All trademarks belong to their owners.
+</footer>
+</body>
+</html>
