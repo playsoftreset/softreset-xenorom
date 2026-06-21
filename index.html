@@ -62,6 +62,7 @@ footer{padding:34px 0 60px;color:var(--muted);font-size:13px;border-top:1px soli
       <a class="btn btn-ghost" href="https://github.com/playsoftreset/softreset-xenorom/releases/latest" target="_blank" rel="noopener">GitHub Releases</a>
     </div>
     <p class="soon">Free · ~38 MB · two mirrors (itch.io + GitHub).</p>
+    <p class="soon" id="dlstat" hidden style="color:var(--paper)"></p>
   </div>
 
   <div class="disclosure">
@@ -102,5 +103,21 @@ footer{padding:34px 0 60px;color:var(--muted);font-size:13px;border-top:1px soli
   Soft Reset — classic games, brand-new experiences.<br>
   Free, non-commercial fan project · AI-generated voices · Not affiliated with or endorsed by Square Enix. All trademarks belong to their owners.
 </footer>
+<script>
+  (function () {
+    var MIN_SHOW = 1; // raise this to hide the counter until downloads pass a threshold
+    fetch('stats.json?_=' + Date.now())
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (s) {
+        if (!s || (s.total || 0) < MIN_SHOW) return;
+        var n = s.total;
+        document.getElementById('dlstat').innerHTML =
+          '<b style="color:var(--amber)">' + n.toLocaleString() + '</b> download' +
+          (n === 1 ? '' : 's') + ' so far';
+        document.getElementById('dlstat').hidden = false;
+      })
+      .catch(function () {});
+  })();
+</script>
 </body>
 </html>
